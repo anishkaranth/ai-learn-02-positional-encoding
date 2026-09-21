@@ -1,0 +1,18 @@
+{
+  "snapshot": "smoke_run",
+  "seed": 42,
+  "no_pe_test_accuracy": 0.234375,
+  "sinusoidal_test_accuracy": 1.0,
+  "learned_test_accuracy": 1.0,
+  "chance_accuracy": 0.25,
+  "runtime_seconds": 2.08,
+  "unit_checks_passed": true,
+  "plots": [
+    "pe_heatmap.png",
+    "position_similarity.png",
+    "accuracy_comparison.png",
+    "pe_heatmap.svg",
+    "position_similarity.svg",
+    "accuracy_comparison.svg"
+  ]
+}
