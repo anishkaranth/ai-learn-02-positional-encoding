@@ -1,0 +1,49 @@
+{
+  "project": "ai-learn-02-positional-encoding",
+  "task": "marker_quarter_classification",
+  "random_seed": 42,
+  "config": {
+    "seq_len": 16,
+    "vocab": 20,
+    "marker_id": 0,
+    "n_classes": 4,
+    "d_model": 32,
+    "n_train": 1024,
+    "n_test": 256,
+    "batch_size": 64,
+    "epochs": 80,
+    "lr": 0.2,
+    "learned_pe_lr": 0.1,
+    "model": "content_gated_PE_readout (a=softmax(Xw); h=aX or a@PE)"
+  },
+  "metrics": {
+    "no_pe_train_accuracy": 0.3271484375,
+    "no_pe_test_accuracy": 0.234375,
+    "sinusoidal_train_accuracy": 1.0,
+    "sinusoidal_test_accuracy": 1.0,
+    "learned_train_accuracy": 1.0,
+    "learned_test_accuracy": 1.0,
+    "no_pe_marker_selection_accuracy": 0.0,
+    "sinusoidal_marker_selection_accuracy": 1.0,
+    "learned_marker_selection_accuracy": 1.0,
+    "chance_accuracy": 0.25,
+    "unit_checks_passed": true,
+    "unit_checks": {
+      "shape_T_D": true,
+      "matches_vaswani_formula": true,
+      "finite": true,
+      "dim0_is_sin_pos": true,
+      "dim1_is_cos_pos": true,
+      "nearby_more_similar_than_far": true,
+      "add_pe_broadcast": true,
+      "learned_shape": true,
+      "relative_dist_diag_zero": true,
+      "all_passed": true
+    }
+  },
+  "runtime_seconds": 2.08,
+  "pe_shape": [
+    16,
+    32
+  ]
+}
