@@ -19,15 +19,14 @@ Implement the Vaswani et al. **sinusoidal** PE and an optional **learned** PE ta
 README.md
 requirements.txt
 positional_encoding.py
+pe_smoke_core.py / pe_smoke_plots.py
 run_smoke.py
 notebooks/positional_encoding.ipynb
 results/
   RESULTS.md
   metrics.json
   JSON.shot
-  pe_heatmap.png / .svg
-  position_similarity.png / .svg
-  accuracy_comparison.png / .svg
+  pe_heatmap.svg / position_similarity.svg / accuracy_comparison.svg
 ```
 
 ## How to run
@@ -73,7 +72,7 @@ X_pe = add_positional_encoding(X, learned.forward())
 \mathrm{PE}(pos, 2i+1) = \cos\left(\frac{pos}{10000^{2i/d_{\mathrm{model}}}}\right)
 \]
 
-Nearby positions have similar PE vectors (high cosine similarity); far positions diverge — see `results/position_similarity.png`.
+Nearby positions have similar PE vectors (high cosine similarity); far positions diverge — see `results/position_similarity.svg`.
 
 ## Smoke task (optional demo)
 
